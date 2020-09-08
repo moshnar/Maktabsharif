@@ -18,18 +18,31 @@ tyler = {
     "quizzes": [0.0, 75.0, 78.0],
     "tests": [100.0, 100.0]
 }
-def Average(lst):
+
+
+def Average(lst):  # return a average of a list items
     return sum(lst) / len(lst)
 
-def get_data(key):
+
+def get_data(key):  # return the values for a certain key
     return {'lloyd': lloyd.get(key), 'tyler': tyler.get(key), 'alice': alice.get(key)}
 
 
-def get_avarages(key='homwork'):
+def get_averages(key='homework'):  # return average value of the certain key
     return {'lloyd': Average(lloyd.get(key)), 'tyler': Average(tyler.get(key)), 'alice': Average(alice.get(key))}
 
 
-def get_class_avarage(key='homwork', names=None):
-    return
+def get_class_average(key='homework',
+                      names=None):  # return all average if no names specified or for a certain list of names
+    if names == None:
+        return {'all': f'The average value for {key} is {Average(get_averages(key).values())}'}
+    else:
 
-print(get_avarages('homework'))
+        return {f'{i}': Average(i.get(key)) for i in names}
+
+name1 = [lloyd, alice]
+#print(get_class_average('homework',name))
+
+
+
+

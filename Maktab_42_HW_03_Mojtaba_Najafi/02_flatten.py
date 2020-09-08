@@ -1,14 +1,14 @@
 import ast
 
-def read_list(input_str):
+def read_list(input_str):#parse the input to the list
     return ast.literal_eval(input_str)
 
 
 
-def flatten(xs):
+def flatten(xs):#
 
     result = []
-    if isinstance(xs, (list, tuple)):
+    if isinstance(xs, list):#find the sublist and call it recursivly
         for x in xs:
             result.extend(flatten(x))
     else:
