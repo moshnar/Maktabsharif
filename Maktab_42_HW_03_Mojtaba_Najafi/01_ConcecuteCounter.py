@@ -17,6 +17,5 @@ else:
 
 
 print (output)
-print(type(output))
 
 

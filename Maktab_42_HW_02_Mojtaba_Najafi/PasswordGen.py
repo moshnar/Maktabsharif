@@ -1,5 +1,11 @@
 import string
 import random
+class passwordGen():
+    pass
+
+
+
+
 def password_generator(length=10):
     #Initializing all items
     L,N,P,U = string.ascii_letters,string.digits,string.punctuation,string.ascii_uppercase
@@ -22,5 +28,5 @@ def password_generator(length=10):
     random_password = ''.join(random.sample(random_password,len(random_password)))
 
     return random_password
-
-print(password_generator(22))
+if __name__ == '__main__':
+    print(password_generator(22))

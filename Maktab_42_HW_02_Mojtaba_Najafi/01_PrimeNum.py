@@ -7,6 +7,6 @@ def isPrime(n):
     return True
 
 
-for i in range(0,100):
+for i in range(2,100):
     if isPrime(i):
         print(f" {i}",end='\t')
