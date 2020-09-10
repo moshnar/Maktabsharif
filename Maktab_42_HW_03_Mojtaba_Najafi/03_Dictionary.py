@@ -38,11 +38,10 @@ def get_class_average(key='homework',
         return {'all': f'The average value for {key} is {Average(get_averages(key).values())}'}
     else:
 
-        return {f'{i}': Average(i.get(key)) for i in names}
-
-name1 = [lloyd, alice]
-#print(get_class_average('homework',name))
+        return [Average(i.get(key)) for i in names]
 
 
-
-
+name = [lloyd, alice]
+print(get_class_average('homework', name))
+print(get_averages('quizzes'))
+print(get_data('tests'))
