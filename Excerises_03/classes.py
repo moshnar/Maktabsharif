@@ -28,3 +28,7 @@ p2 = Point(1, 4)
 #print(p1.__norm)
 #print(p1.__calc_norm())
 #print(p1.get_norm())
+
+
+def sum1 (x,y):
+    print( sum(x,y))
