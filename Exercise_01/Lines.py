@@ -1,5 +1,4 @@
-
-def box (n,m,ch="*"):
+def box(n, m, ch="*"):
     for i in range(n):
         for j in range(m):
             if (i == 0 or i == n - 1 or j == 0 or j == m - 1):
@@ -8,4 +7,5 @@ def box (n,m,ch="*"):
                 print(' ', end='  ')
         print()
 
-box(10,5,"#")
+
+box(10, 5, "#")

@@ -4,4 +4,5 @@ def stats(str):
     print(f'longest line : {len(longest_line)}')
     print(longest_line)
 
+
 stats('sample.txt')

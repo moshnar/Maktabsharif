@@ -4,10 +4,10 @@ class Books:
     def __init__(self, title, price, author):  # initializing the variables
         self.title = title
         self.price = price
-        if type(author)==list :
+        if type(author) == list:
 
             self.author = author
-        else :
+        else:
             self.author = [author]
         Books.total += 1
 

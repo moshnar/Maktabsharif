@@ -8,14 +8,13 @@ class Paper:
 
     def __repr__(self):
         return str({'title': self.title, 'owner': self.owner})
+
     def __str__(self):
         return str(self.title)
 
-    def __is_valid(self,owners):
-        # if Article.owner ==isinstance(Researcher) and Book.owner ==isinstance(Author) and Poetry.owner ==isinstance(Poet):
-        #     return True
-        # else:
-        #     return False
+    def __is_valid(self, owners):
+        # if Article.owner ==isinstance(Researcher) and Book.owner ==isinstance(Author) and Poetry.owner
+        # ==isinstance(Poet): return True else: return False
         return True
 
 
@@ -30,6 +29,8 @@ class Person:
 
     def __str__(self):
         return str(self.name)
+
+
 class Article(Paper):
     def __init__(self, journal, year, title, owner):
         super(Article, self).__init__(title, owner)
@@ -72,7 +73,7 @@ class Researcher(Person):
 
     def __repr__(self):
         return str({'name': self.name, 'email': self.email, 'gender': self.gender, 'field': self.field,
-                'university': self.university})
+                    'university': self.university})
 
 
 class Poet(Person):
@@ -91,14 +92,16 @@ class Author(Person):
         self.genre = genre
 
     def __repr__(self):
-        return str({'name': self.name, 'email': self.email, 'gender': self.gender, 'code': self.code, 'genre': self.genre})
+        return str(
+            {'name': self.name, 'email': self.email, 'gender': self.gender, 'code': self.code, 'genre': self.genre})
     # def __str__(self):
     #     return {'name' : self.name}
+
 
 b = Author('me', 'me@mail.com', 'male', 123, 'Drama')
 c = Author('me1', 'me@mail.com', 'male', 123, 'Drama')
 d = Author('me2', 'me@mail.com', 'male', 123, 'Drama')
 e = Author('me3', 'me@mail.com', 'male', 123, 'Drama')
-l = [b,c,d,e]
+l = [b, c, d, e]
 A = Article("nature", 2020, 'Python', l)
 print(A.owner)

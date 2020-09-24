@@ -1,3 +1,3 @@
-li = ['ali','Jamshid','mohammad','javad']
+li = ['ali', 'Jamshid', 'mohammad', 'javad']
 
-print({ li[i] : len(li) for i in range(len(li))})
+print({li[i]: len(li) for i in range(len(li))})

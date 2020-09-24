@@ -1,5 +1,4 @@
-import string
-def remove_lowercase(input_,out):
+def remove_lowercase(input_, out):
     input_file = open(input_)
     out_file = open(out, 'w')
     for line in input_file:
@@ -10,6 +9,4 @@ def remove_lowercase(input_,out):
     return out_file
 
 
-remove_lowercase('sample.txt','out.txt')
-
-
+remove_lowercase('sample.txt', 'out.txt')

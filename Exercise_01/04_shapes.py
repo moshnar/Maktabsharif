@@ -2,30 +2,41 @@ def egg():
     top()
     bottom()
     print()
+
+
 def cup():
     bottom()
     line()
     print()
 
-def stop ():
+
+def stop():
     top()
     print("| STOP |")
     bottom()
     print()
-def hat ():
+
+
+def hat():
     top()
     line()
     print()
-def top ():
+
+
+def top():
     print("        ")
     print("/------\\")
     print("/      \\")
+
+
 def bottom():
     print("\\      /")
     print(" \______/")
 
+
 def line():
     print("+______+")
+
 
 egg()
 cup()

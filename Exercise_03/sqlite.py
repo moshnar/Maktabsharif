@@ -8,7 +8,7 @@ c.execute("""CREATE TABLE employee(
                 last text,
                 pay integer)""")
 
-#c.execute('INSERT INTO employee VALUES ("Jone","Doe",1000)')
+# c.execute('INSERT INTO employee VALUES ("Jone","Doe",1000)')
 c.execute("SELECT * FROM employee ")
 conn.commit()
 print(c.fetchall())

@@ -42,6 +42,6 @@ def get_class_average(key='homework',
 
 
 name = [lloyd, alice]
-print(get_class_average('homework',name))
+print(get_class_average('homework', name))
 print(get_averages('quizzes'))
-#print(get_data('tests'))
+# print(get_data('tests'))

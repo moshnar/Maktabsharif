@@ -1,5 +1,5 @@
 # s= input("Enter any String ...")
-import collections
+
 s = '1122113344411'
 count = 1
 output = ''
@@ -17,4 +17,4 @@ else:
     output = "the string is empty"
 
 print(output)
-#print(collections.Counter(s))
+# print(collections.Counter(s))

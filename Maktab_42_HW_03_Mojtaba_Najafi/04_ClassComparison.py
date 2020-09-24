@@ -27,8 +27,8 @@ def sort_alpha(list1,
     return sorted(left_list(list1, list2))
 
 
-list1 = 'amirarsalan','mohammadreza','nima','ali','nima','saman','amirarsalan' # example list
-list2 = 'ahmad','mohammadreza','amirarsalan','sadegh','mohammadreza','ahmad'  # example list 2
+list1 = 'amirarsalan', 'mohammadreza', 'nima', 'ali', 'nima', 'saman', 'amirarsalan'  # example list
+list2 = 'ahmad', 'mohammadreza', 'amirarsalan', 'sadegh', 'mohammadreza', 'ahmad'  # example list 2
 
 print(sort_alpha(list1, list2))
 print(left_list(list1, list2))
