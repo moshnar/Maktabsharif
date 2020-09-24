@@ -19,7 +19,7 @@ class Rectangle(Shape):
         return self.x * self.y
 
     def perimeter(self):
-        return (self.x * self.y) * 2
+        return (self.x + self.y) * 2
 
     def sketch(self):
         print('\n'.join(('*' * self.x) for _ in range(self.y)))
@@ -40,7 +40,7 @@ class Square(Rectangle):
 
 
 class Parallelogram(Shape):
-    def __init__(self, x, y):
+    def __init__(self, x, y,z):
         self.x = x
         self.y = y
 
@@ -48,7 +48,8 @@ class Parallelogram(Shape):
         return self.x * self.y
 
     def perimeter(self):
-        return (self.x * self.y) * 2
+        return (self.x + self.z) * 2
+
 
     def sketch(self):
         for i in range(0, self.x):
@@ -60,7 +61,7 @@ class Parallelogram(Shape):
 
 
 class Rhombus(Parallelogram):
-    def __init__(self, x, y):
+    def __init__(self, x, y,):
         super().__init__(x, y)
 
     def area(self):
@@ -68,6 +69,7 @@ class Rhombus(Parallelogram):
 
     def perimeter(self):
         return self.x * 4
+
 
     def sketch(self):
         for i in range(self.x):
@@ -81,7 +83,8 @@ class Diamond(Rhombus, Square):
         super().__init__(x, y)
 
     def area(self):
-        return (self.x * self.y) // 2
+        #return (self.x * self.y) // 2
+        super(Square, self).area(self.x,self.y)
 
     def perimeter(self):
         return self.x * 4

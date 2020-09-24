@@ -1,5 +1,6 @@
 # s= input("Enter any String ...")
-s = '11221133444'
+import collections
+s = '1122113344411'
 count = 1
 output = ''
 outputFormat = '({},{})'  # format the out put
@@ -16,3 +17,4 @@ else:
     output = "the string is empty"
 
 print(output)
+#print(collections.Counter(s))

@@ -2,10 +2,11 @@ from datetime import datetime
 
 
 class Account:
+    min_balance=10
     def __init__(self, name, balance):  # initialis varibales
         self.name = name
         self.balance = balance
-        self.min_balance = 10
+       # self.min_balance = 10
 
     def deposit(self, amount):  # make a deposit
         self.balance += amount
@@ -22,8 +23,8 @@ class Account:
     def transfer(self, amount, name):  # make a transfer considering the minimum balance
         if self.__withdrawable(amount):
 
-            self.balance = self.balance - amount
-            name.balance = name.balance + amount
+            self.balance = self.balance - amount#withdraw
+            name.balance = name.balance + amount#deposit
             print(f"transfer was successful and the new balance is {self.balance} \n \n {datetime.now()}")
         else:
             print(f'Maximum transfer amount is {self.balance - self.min_balance}')
