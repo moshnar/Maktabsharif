@@ -1,8 +1,8 @@
 class Paper:
     def __init__(self, title, owner=[]):
         self.title = title
-        if self.__is_valid():
-            type(self.owner) == owner
+        if self.__is_valid(owner):
+            self.owner = owner
         else:
             print("invalid owner")
 
@@ -13,8 +13,13 @@ class Paper:
         return str(self.title)
 
     def __is_valid(self, owners):
-        # if Article.owner ==isinstance(Researcher) and Book.owner ==isinstance(Author) and Poetry.owner
-        # ==isinstance(Poet): return True else: return False
+        if type(owners)==Author:
+            pass
+        elif type(owners)==Researcher:
+            pass
+        elif type(owners)==Poet:
+            pass
+        
         return True
 
 
@@ -104,4 +109,4 @@ d = Author('me2', 'me@mail.com', 'male', 123, 'Drama')
 e = Author('me3', 'me@mail.com', 'male', 123, 'Drama')
 l = [b, c, d, e]
 A = Article("nature", 2020, 'Python', l)
-print(A.owner)
+print(type(b)==Author)

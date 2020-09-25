@@ -15,10 +15,16 @@ class Mylist(list):
 
 class Mylist2(list):
     def __gt__(self, other):
-        return mean(self) < mean(other)
+        return mean(self) > mean(other)
 
-    def __eq__(self, other):
-        return mean(self) == mean(other)
+    def __le__(self, other):
+        return mean(self) <= mean(other)
+
+    def __ge__(self, other):
+        return mean(self) >= mean(other)
+
+    def __ne__(self, other):
+        return mean(self) != mean(other)
 
 
 li = [[0, 100, 100], [1, 2], [2.1, 5.4, 3], [1, 4], [100, 100, 100], [90, 90, 90, 90, 90]]
