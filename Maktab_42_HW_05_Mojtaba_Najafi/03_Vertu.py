@@ -13,14 +13,16 @@ class Paper:
         return str(self.title)
 
     def __is_valid(self, owners):
-        if type(owners)==Author:
-            pass
-        elif type(owners)==Researcher:
-            pass
-        elif type(owners)==Poet:
-            pass
-        
-        return True
+        if owners:
+            for i in owners:
+                if type(i) == Author and type(self) == Book:
+                    return True
+                elif type(i) == Poet and type(self) == Poetry:
+                    return True
+                elif type(i) == Researcher and type(self) == Article:
+                    return True
+        else:
+            return False
 
 
 class Person:
@@ -109,4 +111,4 @@ d = Author('me2', 'me@mail.com', 'male', 123, 'Drama')
 e = Author('me3', 'me@mail.com', 'male', 123, 'Drama')
 l = [b, c, d, e]
 A = Article("nature", 2020, 'Python', l)
-print(type(b)==Author)
+print(type(b) == Author)
