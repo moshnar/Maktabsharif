@@ -1,73 +1,107 @@
-from abc import abstractmethod, ABC
+import math
+from abc import ABC, abstractmethod
 
 
 class Shape(ABC):
-    def __int__(self, x, y=None):
-        self.x = x
-        self.y = y
+    def __init__(self):
+        raise NotImplementedError
 
-    @staticmethod
-    @abstractmethod
-    def perimiter():
-        pass
-
-    @staticmethod
     @abstractmethod
     def area(self):
         pass
 
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+    @abstractmethod
     def sketch(self):
         pass
 
-    # def concat_area(self,rectangle=[]):
-    #     total_area = 0
-    #     for i in rectangle:
-    #          total_area += area(i)
-    #     return total_area
+    @staticmethod
+    def concat_area(l: list):
+        area = 0
+        for i in l:
+            if type(i) == Rectangle:
+                area += i.area
+            else:
+                print('invalid parameter')
+        return area
 
-class Square(Shape):
-    def __int__(self, x):
-        super(Square, self).__int__(x)
+
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    @property
+    def area(self):
+        return self.width * self.height
+
+    @property
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+    def sketch(self):
+        for _ in range(self.height):
+            print('*' * self.width)
 
 
-    def perimiter(self,x):
-        return self.x * 4
-
-    def area(self,x):
-        return self.x**2
-
-    def sketch(self,x):
-        for i in range(x):
-            for i in range(x):
-                print('*', end='  ')
-            print()
-    # @staticmethod
-    # def con (a):
-    #     t = 0
-    #     for i in len(a):
-    #         t = sum(a(i))
-    #     return t
+class Square(Rectangle):
+    def __init__(self, a):
+        super().__init__(a, a)
 
     @staticmethod
-    def draw_concat(a, b, c):
-        for i in range(a):
-            for i in range(a):
-                print('*', end='  ')
-            print()
-        for j in range(b):
-            for j in range(b):
-                print('*', end='  ')
-            print()
-
-        for k in range(c):
-            for k in range(c):
-                print('*', end='  ')
+    def draw_concat(l):# will draw squares next to eachother
+        for i in range(max(l)):
+            for j in l:
+                if type(j) == int:
+                    if j - i > 0:
+                        print('*' * j, end='')
+                    else:
+                        print(' ' * j, end='')
+                else:
+                    raise TypeError
             print()
 
 
-s = Square()
-#s.draw_concat(2, 5, 3)
-l = [2,3,4,5]
-#print(s.con(l))
+class Parallelogram(Shape):
+    def __init__(self, a, b, height): # both are equal
+        self.height = height
+        self.a = a
+        self.b = b
+
+    @property
+    def area(self):
+        return self.h * self.a
+
+    @property
+    def perimeter(self):
+        return 2 * (self.b + self.a)
+
+    def sketch(self):
+        for i in range(self.h - 1, -1, -1):
+            print(i * (int(math.sqrt(self.b ** 2 - self.h ** 2)) // self.h) * ' ' + self.a * '*')
 
 
+class Rhombus(Parallelogram):
+    def __init__(self, a: int, h: int):
+        super().__init__(a, a, h)
+
+
+class Diamond(Square, Rhombus):
+    def __init__(self, a):
+        Square.__init__(self, a)
+
+    def sketch(self):
+        n = self.w * 1.7
+        n = math.ceil(n) if math.ceil(n) % 2 == 1 else math.floor(n)
+
+        for i in range(1, n + 1):
+            i = i - (n // 2 + 1)
+            if i < 0:
+                i = -i
+            print(' ' * i + '*' * (n - i * 2))
+
+
+Square.concat_area([3, 5, 10, 9, 10])

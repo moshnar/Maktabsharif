@@ -1,7 +1,8 @@
-from person import Person
+from Person import Person
 import logging
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(format='%(asctime)s :: %(levelname)s :: %(funcName)s :: %(lineno)d \
+:: %(message)s', level = logging.INFO , filename='sub.log')
 
 
 def sub(a, b):

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="number"></label>
+    <input type="text" id="number" name="number">
+    <button id="Submit">GO!</button>
+    <div id="output"></div>
+    <script>
+        document.getElementById('Submit').onclick = function () {
+
+            let num = document.getElementById('number').value;
+
+
+
+                document.getElementById('output').innerHTML = ''
+
+                for (let i=1; i<=num; i++) {
+                    document.getElementById('output').innerHTML += `<br> ${i}`
+                }
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 import logging
 
-logging.basicConfig(level=logging.WARNING)
+logging.basicConfig(format='%(asctime)s :: %(levelname)s :: %(funcName)s :: %(lineno)d \
+:: %(message)s', level = logging.WARNING , filename='person.log')
 
 
 class Person:
@@ -9,6 +10,7 @@ class Person:
         self.family = family
         self.age = age
         logging.warning("Person created! {} {}".format(self.name, self.family))
+        logging.debug()
 
     @property
     def age(self):

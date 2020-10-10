@@ -1,0 +1,1 @@
+Syntax error is neither an Error nor an Exception because both of them happen during runtime, and syntax error causes a compilation error which would prevent the program from compiling and therefore from running.
