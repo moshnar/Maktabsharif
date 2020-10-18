@@ -1,0 +1,24 @@
+body{
+    background: black;
+}
+
+.red{
+
+    background: red;
+    position:absolute;
+    margin: 0 auto;
+    right: 0;
+    height: 500px;
+    width: 500px;
+    border-radius: 25px;
+}
+
+.yellow{
+    position: absolute;
+    margin: 0 auto;
+    right: 0;
+    top: 200px;
+    height: 25%;
+    width: 25%;
+    background: yellow;
+}

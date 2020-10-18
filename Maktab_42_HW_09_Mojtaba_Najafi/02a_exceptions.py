@@ -1,10 +1,16 @@
 def exception_handler(func):
-    def inner_function(*args, **kwargs):
+    """generic decorator for exception handling"""
+    def func_wrapper(*args, **kwargs):
+
         try:
-            func(*args, **kwargs)
-        except TypeError:
-            print(f"{func.__name__} only takes numbers as the argument")
-    return inner_function
+           return func(*args, **kwargs)
+
+        except Exception as e:
+
+            print(f'Error : {e}')
+            return None
+
+    return func_wrapper
 
 
 @exception_handler
@@ -21,6 +27,10 @@ def area_circle(radius):
 def area_rectangle(length, breadth):
     print(length * breadth)
 
+@exception_handler
+def div(x,y):
+    return x/y
+
 
 area_square(2)
 area_circle(2)
@@ -28,6 +38,6 @@ area_rectangle(2, 4)
 area_square("some_str")
 area_circle("some_other_str")
 area_rectangle("some_other_rectangle")
-
+div(0,0)
 
 
