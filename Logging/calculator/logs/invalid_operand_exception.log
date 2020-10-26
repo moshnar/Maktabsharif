@@ -1,0 +1,10 @@
+2020-10-25 19:30:54,671 — oerand_exception — ERROR — number should be int/float
+Traceback (most recent call last):
+  File "/Users/moshnar/PycharmProjects/MaktabSharif/Logging/calculator/logic/parse.py", line 17, in is_num
+    float(n)
+ValueError: could not convert string to float: 'a'
+2020-10-25 19:31:04,871 — oerand_exception — ERROR — number should be int/float
+Traceback (most recent call last):
+  File "/Users/moshnar/PycharmProjects/MaktabSharif/Logging/calculator/logic/parse.py", line 17, in is_num
+    float(n)
+ValueError: could not convert string to float: 'a'

@@ -16,3 +16,5 @@ def level_counter(filename, level=logging.INFO):
                     counter += 1
 
     return counter
+
+print(level_counter('sample.log'))

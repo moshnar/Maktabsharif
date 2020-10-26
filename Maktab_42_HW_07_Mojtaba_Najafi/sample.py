@@ -3,7 +3,6 @@ from person import Person
 
 from level_counter import level_counter
 
-
 sample = logging.Logger(__name__, level=logging.INFO)
 
 fileformat = logging.Formatter('%(asctime)s | %(name)-10s | %(levelname)-16s | %(msecs)s | %(message)s')
@@ -20,15 +19,14 @@ sample.addHandler(file_handler)
 sample.addHandler(stream_handler)
 
 
-
-
 def sub(a, b):
     if b != 0:
         sample.debug('a / b = ' + str(a / b), exc_info=1)
         return a / b
-    
+
     else:
         sample.info('Divide by zero!')
+
 
 print(sub(2, 3))
 print(sub(2, 0))
@@ -45,4 +43,3 @@ except FileNotFoundError:
 
 except:
     print('Instance of log level not found')
-

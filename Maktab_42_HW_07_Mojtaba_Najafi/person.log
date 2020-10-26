@@ -1,3 +1,9 @@
 2020-10-11 03:33:43,352 :: DEBUG :: __init__ :: 12 :: Person created! ali alavi
 2020-10-11 03:33:43,361 :: CRITICAL :: age :: 24 :: invalid age!
 2020-10-11 03:33:43,361 :: DEBUG :: __init__ :: 12 :: Person created! gholi gholami
+2020-10-23 10:21:43,532 | person     | WARNING          | 532.0870876312256 | Person created! ali alavi
+2020-10-23 10:21:43,533 | person     | CRITICAL         | 533.433198928833 | invalid age!
+2020-10-23 10:21:43,533 | person     | WARNING          | 533.6241722106934 | Person created! gholi gholami
+2020-10-23 11:30:14,148 | person     | WARNING          | 148.54192733764648 | Person created! ali alavi
+2020-10-23 11:30:14,149 | person     | CRITICAL         | 149.5511531829834 | invalid age!
+2020-10-23 11:30:14,149 | person     | WARNING          | 149.69491958618164 | Person created! gholi gholami

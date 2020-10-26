@@ -1,17 +1,14 @@
-# Program make a simple calculator
-
-# This function adds two numbers
 def add(x, y):
     return x + y
 
-# This function subtracts two numbers
-def subtract(x, y):
+
+def sub(x, y):
     return x - y
 
-# This function multiplies two numbers
-def multiply(x, y):
+
+def mul(x, y):
     return x * y
 
-# This function divides two numbers
-def divide(x, y):
+
+def div(x, y):
     return x / y

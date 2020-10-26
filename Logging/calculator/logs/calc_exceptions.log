@@ -1,0 +1,14 @@
+2020-10-25 19:30:54,680 — calc_exception — ERROR — number should be int/float
+Traceback (most recent call last):
+  File "/Users/moshnar/PycharmProjects/MaktabSharif/Logging/calculator/logic/parse.py", line 17, in is_num
+    float(n)
+ValueError: could not convert string to float: 'a'
+2020-10-25 19:31:04,871 — calc_exception — ERROR — number should be int/float
+Traceback (most recent call last):
+  File "/Users/moshnar/PycharmProjects/MaktabSharif/Logging/calculator/logic/parse.py", line 17, in is_num
+    float(n)
+ValueError: could not convert string to float: 'a'
+2020-10-25 19:31:10,056 — calc_exception — ERROR — Invalid format
+NoneType: None
+2020-10-25 19:43:55,612 — calc_exception — ERROR — Invalid format
+NoneType: None
