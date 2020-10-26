@@ -3,6 +3,7 @@
 
 _invalid = -1
 
+
 def prepare_players(player_names=["red", "green", "blue", "yellow"],
                     no_of_pieces=4,
                     **extra_args):
@@ -19,20 +20,21 @@ def prepare_players(player_names=["red", "green", "blue", "yellow"],
         player["pieces_in"] = []
 
         for piece in player["pieces_out"]:
-            piece["location"] = _invalid    # invalid global location
-            piece["progress"] = 0           # progress towards the end of the tour
-            piece["player"] = player        # reverse reference
-                                            # reduces argument passing
+            piece["location"] = _invalid  # invalid global location
+            piece["progress"] = 0  # progress towards the end of the tour
+            piece["player"] = player  # reverse reference
+            # reduces argument passing
 
         players.append(player)
 
     return players
 
+
 def piece_out(target):
     target["location"] = -1
     target["progress"] = 0
 
+
 def piece_in(player):
     piece = player["pieces_out"].pop()
     player["pieces_in"]
-

@@ -4,13 +4,13 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('FILE_NAME1', type=str, help='Name of first file')
     parser.add_argument('FILE_NAME2', type=str, help='Name of second file')
-    
+
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('-i', '--intersection', action='store_true')
     group.add_argument('-u', '--union', action='store_true')
     group.add_argument('-d', '--difference', action='store_true')
     group.add_argument('-s', '--symmetricdiff', action='store_true')
-    
+
     parser.add_argument('-o', '--output_file', type=str)
 
     args = parser.parse_args()
@@ -35,8 +35,7 @@ if __name__ == '__main__':
     if args.output_file:
         with open(args.output_file, 'w') as f:
             for num in list_out:
-                f.write(str(num)+'\n')
+                f.write(str(num) + '\n')
 
     else:
         print(list_out)
-

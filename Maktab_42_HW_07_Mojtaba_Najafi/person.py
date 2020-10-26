@@ -16,9 +16,11 @@ class Person():
         self.family = family
         self.age = age
         person.warning("Person created! {} {}".format(self.name, self.family))
+
     @property
     def age(self):
         return self._age
+
     @age.setter
     def age(self, a):
         if a > 0:

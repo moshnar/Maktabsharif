@@ -6,25 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="number"></label>
-    <input type="text" id="number" name="number">
-    <button id="Submit">GO!</button>
-    <div id="output"></div>
-    <script>
-        document.getElementById('Submit').onclick = function () {
+<label for="number"></label>
+<input type="text" id="number" name="number">
+<button id="Submit">GO!</button>
+<div id="output"></div>
+<script>
+    document.getElementById('Submit').onclick = function () {
 
-            let num = document.getElementById('number').value;
+        let num = document.getElementById('number').value;
 
 
+        document.getElementById('output').innerHTML = ''
 
-                document.getElementById('output').innerHTML = ''
-
-                for (let i=1; i<=num; i++) {
-                    document.getElementById('output').innerHTML += `<br> ${i}`
-                }
-
+        for (let i = 1; i <= num; i++) {
+            document.getElementById('output').innerHTML += `<br> ${i}`
         }
 
-    </script>
+    }
+
+</script>
 </body>
 </html>

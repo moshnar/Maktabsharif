@@ -1,5 +1,4 @@
 import os
-from functools import reduce
 
 
 def size_of_files(path, itemlen=5):
@@ -17,6 +16,6 @@ def size_of_files(path, itemlen=5):
         print(error)
 
 
-dir = '/Users/me/PycharmProjects/MaktabSharif/'
+dir = '/Users/moshnar/PycharmProjects/MaktabSharif/date_time'
 
 size_of_files(dir)

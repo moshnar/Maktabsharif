@@ -52,7 +52,7 @@ class Square(Rectangle):
         super().__init__(a, a)
 
     @staticmethod
-    def draw_concat(l):# will draw squares next to eachother
+    def draw_concat(l):  # will draw squares next to eachother
         for i in range(max(l)):
             for j in l:
                 if type(j) == int:
@@ -66,7 +66,7 @@ class Square(Rectangle):
 
 
 class Parallelogram(Shape):
-    def __init__(self, a, b, height): # both are equal
+    def __init__(self, a, b, height):  # both are equal
         self.height = height
         self.a = a
         self.b = b

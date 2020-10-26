@@ -1,4 +1,5 @@
 def fib(n):
-    return n**n
+    return n ** n
+
 
 print('fib excueted ')

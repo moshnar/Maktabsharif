@@ -1,6 +1,6 @@
 import time
 
-first =   input("enter the 1st one")
+first = input("enter the 1st one")
 start = time.time()
 
 second = input("enter the second one")

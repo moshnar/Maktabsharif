@@ -40,10 +40,12 @@ def debug(func):
     def wrapper(*func_args, **func_kwargs):
         print(f'Calling :   {func.__name__}  ()')
         print(f'function args are : {func_args}')
-        retval = func(*func_args,**func_kwargs)
+        retval = func(*func_args, **func_kwargs)
         print(f'function   {func.__name__}  () returns  {repr(retval)}')
         return retval
+
     return wrapper
+
 
 @debug
 def make_greeting(name, age=None):
@@ -53,5 +55,4 @@ def make_greeting(name, age=None):
         return f"Whoa {name}! {age} already, youare growing up!"
 
 
-make_greeting('Mamad',22)
-
+make_greeting('Mamad', 22)

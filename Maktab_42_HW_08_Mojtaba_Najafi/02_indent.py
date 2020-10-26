@@ -14,7 +14,7 @@ class Indenter:
 
 
 with Indenter() as indent:
-     indent.print("Hi!")
-     with indent:
+    indent.print("Hi!")
+    with indent:
         indent.print("how are you?")
-     indent.print("bye!")
+    indent.print("bye!")

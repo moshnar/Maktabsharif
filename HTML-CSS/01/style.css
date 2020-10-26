@@ -1,11 +1,11 @@
-body{
+body {
     background: black;
 }
 
-.red{
+.red {
 
     background: red;
-    position:absolute;
+    position: absolute;
     margin: 0 auto;
     right: 0;
     height: 500px;
@@ -13,7 +13,7 @@ body{
     border-radius: 25px;
 }
 
-.yellow{
+.yellow {
     position: absolute;
     margin: 0 auto;
     right: 0;

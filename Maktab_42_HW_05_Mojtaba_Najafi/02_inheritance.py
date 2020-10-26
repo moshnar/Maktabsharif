@@ -8,7 +8,6 @@ class A:
 class Z:
     def do_job(self, n, *args, **kwargs):
         if type(self) == F:
-
             super().do_job(*args, **kwargs)
         print(f'I am counting from 1 to {n}: {list(range(1, n + 1))}')
 
@@ -41,6 +40,7 @@ class F(Z, B):
     def do_job(self, s, n):
         super().do_job(n, s)
         print('I am playing ...')
+
 
 obja = A()
 obja.do_job()

@@ -1,6 +1,8 @@
 import unittest
+
 import board
 import logic
+
 
 class TestChain(unittest.TestCase):
     def setUp(self):

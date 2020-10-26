@@ -1,7 +1,7 @@
 import logging
-from person import Person
 
 from level_counter import level_counter
+from person import Person
 
 sample = logging.Logger(__name__, level=logging.INFO)
 

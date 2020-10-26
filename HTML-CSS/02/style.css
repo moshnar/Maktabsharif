@@ -1,4 +1,4 @@
-.container{
+.container {
     background-color: black;
     position: absolute;
     height: 600px;
@@ -15,7 +15,8 @@
     margin: 10px;
 
 }
-.white1{
+
+.white1 {
     background: white;
     position: absolute;
     width: 45%;
@@ -23,7 +24,8 @@
     left: 0;
     margin: 10px;
 }
-.white2{
+
+.white2 {
     background: white;
     position: absolute;
     width: 45%;

@@ -10,7 +10,7 @@ print(s)
 
 hour = 8 * 3600
 
-while pills_count !=0:
-    m+= hour
+while pills_count != 0:
+    m += hour
     pills_count -= 1
-    print(time.localtime(m)[2:4],pills_count)
+    print(time.localtime(m)[2:4], pills_count)
